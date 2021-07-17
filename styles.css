@@ -1,0 +1,358 @@
+@import url(./vendor/normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap');
+
+
+
+.page {
+    max-width: 1440px;
+    background: url(./assets/background-stars.svg), #070724;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: "Spartan", sans-serif;
+    margin: auto;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 9998;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header__menu-btn {
+    display: none;
+}
+
+@media (max-width: 510px) {
+    .header {
+        margin: 0;
+        width: 100%;
+        z-index: 3;
+        display: flex;
+        position: fixed;
+        top: 0px;
+        height: auto;
+    }
+          
+    .header .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .5s ease;
+        position: absolute;
+        top: 84px;
+        right: 0;
+    }
+      
+      /* menu icon */
+      
+    .header .header__menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+        align-self: center;
+    }
+      
+    .header .header__menu-icon .navicon {
+        background: white;
+        display: block;
+        height: 3px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 25px;
+    }
+      
+    .header .header__menu-icon .navicon:before,
+    .header .header__menu-icon .navicon:after {
+        background: white;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+      
+    .header .header__menu-icon .navicon:before {
+        top: 7px;
+    }
+      
+    .header .header__menu-icon .navicon:after {
+        top: -7px;
+    }
+      
+      /* menu btn */
+    
+      
+    .header .header__menu-btn:checked ~ .menu {
+        max-height: 240px;
+    }
+      
+    .header .header__menu-btn:checked ~ .header__menu-icon .navicon {
+        background: transparent;
+    }
+      
+    .header .header__menu-btn:checked ~ .header__menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+      
+    .header .header__menu-btn:checked ~ .header__menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+      
+    .header .header__menu-btn:checked ~ .header__menu-icon:not(.steps) .navicon:before,
+    .header .header__menu-btn:checked ~ .header__menu-icon:not(.steps) .navicon:after {
+        top: 0;
+    }
+
+    .header .header__link:focus + .menu {
+        max-height: 0;
+    }
+    
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    margin-right: 41px;
+}
+
+@media (max-width: 666px) {
+    .menu {
+        margin-right: 25px;
+    }
+}
+
+@media (max-width: 510px) {      
+    .menu {
+        display: block;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color: rgba(35, 35, 35, 0.5);
+    }
+}
+
+
+.logo-link {
+    text-decoration: none;
+    margin: 22px auto 27px 32px;
+}
+
+.logo {
+    margin: 0;
+    font-family: "Antonio", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 28px;
+    line-height: 36.23px;
+    letter-spacing: -1.05px;
+    cursor: pointer;
+    transition: opacity 0.4s ease;
+}
+
+.logo:hover {
+    opacity: 0.7;
+}
+
+.header__list {
+    list-style: none;
+    margin-right: 33px;
+}
+
+.header__link {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: opacity 0.4s ease;
+}
+
+.header__link:hover {
+    opacity: 0.7;
+}
+
+.header__link-active {
+    color: #419EBB;
+}
+
+.header__list:last-child {
+    margin-right: 0;
+}
+
+
+/* Lead */
+
+.lead {
+    display: flex;
+    justify-content: space-between;
+    max-width: 940px;
+    width: 65.2%;
+    margin: 126px 165px 87px auto;
+}
+
+.lead__image-group {
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+}
+
+.lead__geology-image {
+    width: 163px;
+    height: 199px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    display: none;
+}
+
+.image-active {
+    display: block;
+}
+
+.lead__info-group {
+    max-width: 350px;
+    width: 37.2%;
+}
+
+.lead__title {
+    font-family: "Antonio", sans-serif;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 103.52px;
+    text-transform: uppercase;
+    margin: 0 0 23px 0;
+}
+
+.lead__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0 0 24px 0;
+}
+
+.lead__source {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    opacity: 50%;
+    margin: 0 0 39px 0;
+}
+
+.lead__source-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.lead__button {
+    width: 350px;
+    height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    color: white;
+    display: flex;
+    width: 100%;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.lead__button:last-child {
+    margin-bottom: 0;
+}
+
+.lead__button:hover {
+    background-color: #D8D8D8;
+}
+
+.lead__button-active {
+    background-color: #419EBB;
+}
+
+.lead__button-number {
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    opacity: 50%;
+    margin: auto 28px;
+}
+
+.lead__button-text {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 2.57px;
+}
+
+
+
+/* Facts */ 
+
+.facts {
+    display: flex;
+    justify-content: center;
+    max-width: 1110px;
+    width: 77%;
+    margin: auto;
+}
+
+.facts__card {
+    max-width: 255px;
+    width: 22.97%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-right: 30px;
+}
+
+.facts__card:last-child {
+    margin-right: 0;
+}
+
+.facts__title {
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    opacity: 50%;
+    margin: 20px auto 4px 23px;
+}
+
+.facts__value {
+    font-family: "Antonio", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 51.75px;
+    letter-spacing: -1.5px;
+    margin: 4px auto 27px 23px;
+}
+
+
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    height: 50px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1;
+    margin-top: 75px;
+    text-align: center;
+}
