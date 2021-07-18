@@ -4,6 +4,7 @@
 
 
 .page {
+    position: relative;
     max-width: 1440px;
     background: url(./assets/background-stars.svg), #070724;
     color: white;
@@ -177,6 +178,7 @@
     font-size: 11px;
     line-height: 25px;
     letter-spacing: 1px;
+    text-transform: uppercase;
     cursor: pointer;
     transition: opacity 0.4s ease;
 }
@@ -198,24 +200,26 @@
 
 .lead {
     display: flex;
-    justify-content: space-between;
-    max-width: 940px;
-    width: 65.2%;
+    justify-content: flex-end;
+    max-width: 1140px;
+    width: 80%;
     margin: 126px 165px 87px auto;
 }
 
 .lead__image-group {
-    margin-top: auto;
-    margin-bottom: auto;
-    position: relative;
+    max-width: 667px;
+    width: 59%;
+    margin-right: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .lead__geology-image {
     width: 163px;
     height: 199px;
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, -40%);
+    top: 554px;
     display: none;
 }
 
