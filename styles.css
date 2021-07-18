@@ -53,7 +53,6 @@
     .header .header__menu-icon {
         cursor: pointer;
         display: inline-block;
-        float: right;
         padding: 28px 20px;
         position: relative;
         user-select: none;
@@ -257,6 +256,8 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 25px;
+    text-decoration: none;
+    color: white;
 }
 
 .lead__button {
@@ -282,9 +283,6 @@
     background-color: #D8D8D8;
 }
 
-.lead__button-active {
-    background-color: #419EBB;
-}
 
 .lead__button-number {
     font-weight: 700;
@@ -341,6 +339,7 @@
     line-height: 51.75px;
     letter-spacing: -1.5px;
     margin: 4px auto 27px 23px;
+    text-transform: uppercase;
 }
 
 

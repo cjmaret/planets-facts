@@ -7,29 +7,29 @@ const planetGeologyView = document.querySelector(".lead__geology-image");
 const planetDescription = document.querySelector(".lead__description");
 const sourceLink = document.querySelector(".lead__source-link");
 
-const mercuryOverview = {
-    alt: "Mercury Planet",
-    image: "./assets/mercury/planet-mercury.svg",
-    link: "https://en.wikipedia.org/wiki/Mercury_(planet)",
-    description: "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth."
+const venusOverview = {
+    alt: "Venus Planet",
+    image: "./assets/venus/planet-venus.svg",
+    link: "https://en.wikipedia.org/wiki/Venus",
+    description: "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty. As the brightest natural object in Earth's night sky after the Moon, Venus can cast shadows and can be, on rare occasions, visible to the naked eye in broad daylight."
 }
 
-const mercuryInternal = {
-    alt: "Mercury Planet Internal View",
-    image: "./assets/mercury/planet-mercury-internal.svg",
-    link: "https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure",
-    description: "Mercury appears to have a solid silicate crust and mantle overlying a solid, iron sulfide outer core layer, a deeper liquid core layer, and a solid inner core. The planet's density is the second highest in the Solar System at 5.427 g/cm3 , only slightly less than Earth's density."
+const venusInternal = {
+    alt: "Venus Planet Internal View",
+    image: "./assets/venus/planet-venus-internal.svg",
+    link: "https://en.wikipedia.org/wiki/Venus#Internal_structure",
+    description: "The similarity in size and density between Venus and Earth suggests they share a similar internal structure: a core, mantle, and crust. Like that of Earth, Venusian core is most likely at least partially liquid because the two planets have been cooling at about the same rate."
 }
 
-const mercuryGeology = {
-    alt: "Mercury Planet Geology View",
-    image: "./assets/mercury/planet-mercury.svg",
-    link: "https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology",
-    description: "Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon’s."
+const venusGeology = {
+    alt: "Venus Planet Geology View",
+    image: "./assets/venus/planet-venus.svg",
+    link: "https://en.wikipedia.org/wiki/Geology_of_Venus",
+    description: "Much of the Venusian surface appears to have been shaped by volcanic activity. Venus has several times as many volcanoes as Earth, and it has 167 large volcanoes that are over 100 km (60 mi) across. The only volcanic complex of this size on Earth is the Big Island of Hawaii."
 }
 
 function addActive(button) {
-    button.style.backgroundColor = "#419EBB";
+    button.style.backgroundColor = "#EDA249";
 }
 
 function removeActive() {
@@ -56,14 +56,14 @@ function geologyActive(button) {
 
 
 buttonOverview.addEventListener('click', () => {
-    addPlanetDetails(mercuryOverview);
+    addPlanetDetails(venusOverview);
     geologyActive(buttonOverview);
     removeActive();
     addActive(buttonOverview);
 })
 
 buttonInternal.addEventListener('click', () => {
-    addPlanetDetails(mercuryInternal);
+    addPlanetDetails(venusInternal);
     geologyActive(buttonInternal);
     removeActive();
     addActive(buttonInternal);
@@ -71,7 +71,7 @@ buttonInternal.addEventListener('click', () => {
 
 
 buttonGeology.addEventListener('click', () => {
-    addPlanetDetails(mercuryGeology);
+    addPlanetDetails(venusGeology);
     geologyActive(buttonGeology);
     removeActive();
     addActive(buttonGeology);

@@ -1,63 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Planets fact site</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css" />
+  <link rel="icon" href="./assets/globe-showing-americas_1f30e.png" />
+  <title>Planets Fact Site | Colin Maretsky</title>
 </head>
-<body>
-  Venus
 
-  <!-- Overview Content Start -->
+<body class="page">
+  <header class="header">
+    <a class="logo-link" href="index.html">
+      <p class="logo">The Planets</p>
+    </a>
+    <input class="header__menu-btn" type="checkbox" id="header__menu-btn" />
+    <label class="header__menu-icon" for="header__menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li class="header__list"><a class="header__link" href="./index.html">Mercury</a></li>
+      <li class="header__list"><a class="header__link header__link-active" href="./venus.html">Venus</a></li>
+      <li class="header__list"><a class="header__link" href="./earth.html">Earth</a></li>
+      <li class="header__list"><a class="header__link" href="./mars.html">Mars</a></li>
+      <li class="header__list"><a class="header__link" href="./jupiter.html">Jupiter</a></li>
+      <li class="header__list"><a class="header__link" href="./saturn.html">Saturn</a></li>
+      <li class="header__list"><a class="header__link" href="./uranus.html">Uranus</a></li>
+      <li class="header__list"><a class="header__link" href="./neptune.html">Neptune</a></li>
+    </ul>
+  </header>
 
-  Venus is the second planet from the Sun. It is named after the 
-  Roman goddess of love and beauty. As the brightest natural object 
-  in Earth's night sky after the Moon, Venus can cast shadows and 
-  can be, on rare occasions, visible to the naked eye in broad daylight.
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Venus -->
+  <section class="lead">
+    <div class="lead__image-group">
+      <img class="lead__image" src="./assets/venus/planet-venus.svg" alt="venus" />
+      <img class="lead__geology-image" src="assets/venus/geology-venus.png" alt="venus geology view" />
+    </div>
+    <div class="lead__info-group">
+      <h1 class="lead__title">Venus</h1>
+      <p class="lead__description">Venus is the second planet from the Sun. It is named after the 
+        Roman goddess of love and beauty. As the brightest natural object 
+        in Earth's night sky after the Moon, Venus can cast shadows and 
+        can be, on rare occasions, visible to the naked eye in broad daylight.</p>
+      <p class="lead__source">Source: <a class="lead__source-link" href="https://en.wikipedia.org/wiki/Venus" target="_blank">Wikipedia</a></p>
+      <div class="lead__button-group">
+        <button class="lead__button lead__button_type_overview" style="background-color: #EDA249">
+          <p class="lead__button-number">01</p>
+          <p class="lead__button-text">Overview</p>
+        </button>
+        <button class="lead__button lead__button_type_internal">
+          <p class="lead__button-number">02</p>
+          <p class="lead__button-text">Internal Structure</p>
+        </button>
+        <button class="lead__button lead__button_type_geology">
+          <p class="lead__button-number">03</p>
+          <p class="lead__button-text">Surface Geology</p>
+        </button>
+      </div>
+    </div>
+  </section>
 
-  <!-- Overview Content End -->
+  <section class="facts">
+    <div class="facts__card">
+      <p class="facts__title">Rotation Time</p>
+      <p class="facts__value">243 Days</p>
+    </div>
+    <div class="facts__card">
+      <p class="facts__title">Revolution Time</p>
+      <p class="facts__value">224.7 Days</p>
+    </div>
+    <div class="facts__card">
+      <p class="facts__title">Radius</p>
+      <p class="facts__value">6,051.8 KM</p>
+    </div>
+    <div class="facts__card">
+      <p class="facts__title">Average Temp.</p>
+      <p class="facts__value">471°c</p>
+    </div>
+  </section>
 
-  <!-- Internal Structure Content Start -->
 
-  The similarity in size and density between Venus and Earth suggests 
-  they share a similar internal structure: a core, mantle, and crust. 
-  Like that of Earth, Venusian core is most likely at least partially 
-  liquid because the two planets have been cooling at about the same rate.
+  <footer class="footer">Made by Colin Maretsky in the Year of Our Lord, 2021</footer>
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Venus#Internal_structure -->
-
-  <!-- Internal Structure Content End -->
-
-  <!-- Surface Geology Content Start -->
-
-  Much of the Venusian surface appears to have been shaped by volcanic activity. 
-  Venus has several times as many volcanoes as Earth, and it has 167 large 
-  volcanoes that are over 100 km (60 mi) across. The only volcanic complex 
-  of this size on Earth is the Big Island of Hawaii.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Venus#Surface_geology -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  243 Days
-
-  Revolution Time
-  224.7 Days
-
-  Radius
-  6,051.8 KM
-
-  Average Temp.
-  471°c
+  <script src="./venus.js"></script>
 </body>
+
 </html>

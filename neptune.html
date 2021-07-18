@@ -1,61 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Planets fact site</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css" />
+  <link rel="icon" href="./assets/globe-showing-americas_1f30e.png" />
+  <title>Planets Fact Site | Colin Maretsky</title>
 </head>
-<body>
-  Neptune
 
-  <!-- Overview Content Start -->
+<body class="page">
+  <header class="header">
+    <a class="logo-link" href="index.html">
+      <p class="logo">The Planets</p>
+    </a>
+    <input class="header__menu-btn" type="checkbox" id="header__menu-btn" />
+    <label class="header__menu-icon" for="header__menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li class="header__list"><a class="header__link" href="./index.html">Mercury</a></li>
+      <li class="header__list"><a class="header__link" href="./venus.html">Venus</a></li>
+      <li class="header__list"><a class="header__link" href="./earth.html">Earth</a></li>
+      <li class="header__list"><a class="header__link" href="./mars.html">Mars</a></li>
+      <li class="header__list"><a class="header__link" href="./jupiter.html">Jupiter</a></li>
+      <li class="header__list"><a class="header__link" href="./saturn.html">Saturn</a></li>
+      <li class="header__list"><a class="header__link" href="./uranus.html">Uranus</a></li>
+      <li class="header__list"><a class="header__link header__link-active" href="./neptune.html">Neptune</a></li>
+    </ul>
+  </header>
 
-  Neptune is the eighth and farthest-known Solar planet from the Sun. In the Solar 
-  System, it is the fourth-largest planet by diameter, the third-most-massive planet, 
-  and the densest giant planet. It is 17 times the mass of Earth, more massive than 
-  its near-twin Uranus.
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Neptune -->
+  <section class="lead">
+    <div class="lead__image-group">
+      <img class="lead__image" src="./assets/neptune/planet-neptune.svg" alt="neptune" />
+      <img class="lead__geology-image" src="assets/neptune/geology-neptune.png" alt="neptune geology view" />
+    </div>
+    <div class="lead__info-group">
+      <h1 class="lead__title">Neptune</h1>
+      <p class="lead__description">Neptune is the eighth and farthest-known Solar planet from the Sun. In the Solar 
+        System, it is the fourth-largest planet by diameter, the third-most-massive planet, 
+        and the densest giant planet. It is 17 times the mass of Earth, more massive than 
+        its near-twin Uranus.</p>
+      <p class="lead__source">Source: <a class="lead__source-link" href="https://en.wikipedia.org/wiki/Neptune" target="_blank">Wikipedia</a></p>
+      <div class="lead__button-group">
+        <button class="lead__button lead__button_type_overview" style="background-color: #2D68F0">
+          <p class="lead__button-number">01</p>
+          <p class="lead__button-text">Overview</p>
+        </button>
+        <button class="lead__button lead__button_type_internal">
+          <p class="lead__button-number">02</p>
+          <p class="lead__button-text">Internal Structure</p>
+        </button>
+        <button class="lead__button lead__button_type_geology">
+          <p class="lead__button-number">03</p>
+          <p class="lead__button-text">Surface Geology</p>
+        </button>
+      </div>
+    </div>
+  </section>
 
-  <!-- Overview Content End -->
+  <section class="facts">
+    <div class="facts__card">
+      <p class="facts__title">Rotation Time</p>
+      <p class="facts__value">16.08 Hours</p>
+    </div>
+    <div class="facts__card">
+      <p class="facts__title">Revolution Time</p>
+      <p class="facts__value">164.79 Years</p>
+    </div>
+    <div class="facts__card">
+      <p class="facts__title">Radius</p>
+      <p class="facts__value">24,622 KM</p>
+    </div>
+    <div class="facts__card">
+      <p class="facts__title">Average Temp.</p>
+      <p class="facts__value">-201°c</p>
+    </div>
+  </section>
 
-  <!-- Internal Structure Content Start -->
 
-  Neptune's internal structure resembles that of Uranus. Its atmosphere forms about 5% 
-  to 10% of its mass and extends perhaps 10% to 20% of the way towards the core. 
-  Increasing concentrations of methane, ammonia and water are found in the lower regions.
+  <footer class="footer">Made by Colin Maretsky in the Year of Our Lord, 2021</footer>
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Neptune#Internal_structure -->
-
-  <!-- Internal Structure Content End -->
-
-  <!-- Surface Geology Content Start -->
-
-  Neptune's atmosphere is 80% hydrogen and 19% helium. A trace amount of methane is also 
-  present. Prominent absorption bands of methane exist at wavelengths above 600 nm, in 
-  the red and infrared portion of the spectrum.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Neptune#Atmosphere -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  16.08 Hours
-
-  Revolution Time
-  164.79 Years
-
-  Radius
-  24,622 KM
-
-  Average Temp.
-  -201°c
+  <script src="./neptune.js"></script>
 </body>
+
 </html>

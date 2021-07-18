@@ -1,63 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Planets fact site</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css" />
+  <link rel="icon" href="./assets/globe-showing-americas_1f30e.png" />
+  <title>Planets Fact Site | Colin Maretsky</title>
 </head>
-<body>
-  Mars
 
-  <!-- Overview Content Start -->
+<body class="page">
+  <header class="header">
+    <a class="logo-link" href="index.html">
+      <p class="logo">The Planets</p>
+    </a>
+    <input class="header__menu-btn" type="checkbox" id="header__menu-btn" />
+    <label class="header__menu-icon" for="header__menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li class="header__list"><a class="header__link" href="./index.html">Mercury</a></li>
+      <li class="header__list"><a class="header__link" href="./venus.html">Venus</a></li>
+      <li class="header__list"><a class="header__link" href="./earth.html">Earth</a></li>
+      <li class="header__list"><a class="header__link header__link-active" href="./mars.html">Mars</a></li>
+      <li class="header__list"><a class="header__link" href="./jupiter.html">Jupiter</a></li>
+      <li class="header__list"><a class="header__link" href="./saturn.html">Saturn</a></li>
+      <li class="header__list"><a class="header__link" href="./uranus.html">Uranus</a></li>
+      <li class="header__list"><a class="header__link" href="./neptune.html">Neptune</a></li>
+    </ul>
+  </header>
 
-  Mars is the fourth planet from the Sun and the second-smallest planet 
-  in the Solar System, being larger than only Mercury. In English, Mars 
-  carries the name of the Roman god of war and is often referred to as 
-  the "Red Planet".
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mars -->
+  <section class="lead">
+    <div class="lead__image-group">
+      <img class="lead__image" src="./assets/mars/planet-mars.svg" alt="mars" />
+      <img class="lead__geology-image" src="assets/mars/geology-mars.png" alt="mars geology view" />
+    </div>
+    <div class="lead__info-group">
+      <h1 class="lead__title">Mars</h1>
+      <p class="lead__description">Mars is the fourth planet from the Sun and the second-smallest planet 
+        in the Solar System, being larger than only Mercury. In English, Mars 
+        carries the name of the Roman god of war and is often referred to as 
+        the "Red Planet".</p>
+      <p class="lead__source">Source: <a class="lead__source-link" href="https://en.wikipedia.org/wiki/Mars" target="_blank">Wikipedia</a></p>
+      <div class="lead__button-group">
+        <button class="lead__button lead__button_type_overview"  style="background-color: #D14C32">
+          <p class="lead__button-number">01</p>
+          <p class="lead__button-text">Overview</p>
+        </button>
+        <button class="lead__button lead__button_type_internal">
+          <p class="lead__button-number">02</p>
+          <p class="lead__button-text">Internal Structure</p>
+        </button>
+        <button class="lead__button lead__button_type_geology">
+          <p class="lead__button-number">03</p>
+          <p class="lead__button-text">Surface Geology</p>
+        </button>
+      </div>
+    </div>
+  </section>
 
-  <!-- Overview Content End -->
+  <section class="facts">
+    <div class="facts__card">
+      <p class="facts__title">Rotation Time</p>
+      <p class="facts__value">1.03 Days</p>
+    </div>
+    <div class="facts__card">
+      <p class="facts__title">Revolution Time</p>
+      <p class="facts__value">1.88 Years</p>
+    </div>
+    <div class="facts__card">
+      <p class="facts__title">Radius</p>
+      <p class="facts__value">3,389.5 KM</p>
+    </div>
+    <div class="facts__card">
+      <p class="facts__title">Average Temp.</p>
+      <p class="facts__value">-28°c</p>
+    </div>
+  </section>
 
-  <!-- Internal Structure Content Start -->
 
-  Like Earth, Mars has differentiated into a dense metallic core overlaid 
-  by less dense materials. Scientists initially determined that the core 
-  is at least partially liquid. Current models of its interior imply a 
-  core consisting primarily of iron and nickel with about 16–17% sulfur.
+  <footer class="footer">Made by Colin Maretsky in the Year of Our Lord, 2021</footer>
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mars#Internal_structure -->
-
-  <!-- Internal Structure Content End -->
-
-  <!-- Surface Geology Content Start -->
-
-  Mars is a terrestrial planet whose surface consists of minerals containing 
-  silicon and oxygen, metals, and other elements that typically make up rock. 
-  The surface is primarily composed of tholeiitic basalt, although parts are 
-  more silica-rich than typical basalt.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mars#Surface_geology -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  1.03 Days
-
-  Revolution Time
-  1.88 Years
-
-  Radius
-  3,389.5 KM
-
-  Average Temp.
-  -28°c
+  <script src="./mars.js"></script>
 </body>
+
 </html>
