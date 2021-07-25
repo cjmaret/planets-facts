@@ -9,6 +9,7 @@ const sourceLink = document.querySelector(".lead__source-link");
 const windowWidth = window.matchMedia("(max-width: 605px)");
 const hamburgerButton = document.querySelector(".header__menu-btn");
 const mobileMenu = document.querySelector(".menu");
+const blackBackground = document.querySelector(".black-background");
 let isClosed = true;
 
 
@@ -132,10 +133,14 @@ function toggleMenu() {
     if (isClosed) {
         mobileMenu.classList.add('menu-active');
         mobileMenu.classList.remove('menu-inactive');
+        blackBackground.style.visibility = "visible";
+        blackBackground.style.opacity = "1";
         isClosed = !isClosed;
     } else {
         mobileMenu.classList.remove('menu-active');
         mobileMenu.classList.add('menu-inactive');
+        blackBackground.style.visibility = "hidden";
+        blackBackground.style.opacity = "0";
         isClosed = !isClosed;
     }
 }
