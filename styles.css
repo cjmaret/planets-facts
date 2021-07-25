@@ -690,6 +690,10 @@
         margin-bottom: 0;
     }
 
+    .lead__button:hover {
+        background-color: transparent;
+    }
+
     .lead__button-number {
         display: none;
     }
