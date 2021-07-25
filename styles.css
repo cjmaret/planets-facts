@@ -4,7 +4,6 @@
 
 
 .page {
-    position: relative;
     max-width: 1440px;
     background: url(./assets/background-stars.svg), #070724;
     color: white;
@@ -18,7 +17,6 @@
 .header {
     display: flex;
     justify-content: space-between;
-    position: sticky;
     top: 0;
     z-index: 9998;
     width: 100%;
@@ -29,119 +27,23 @@
     display: none;
 }
 
-@media (max-width: 510px) {
-    .header {
-        margin: 0;
-        width: 100%;
-        z-index: 3;
-        display: flex;
-        position: fixed;
-        top: 0px;
-        height: auto;
-    }
-          
-    .header .menu {
-        clear: both;
-        max-height: 0;
-        transition: max-height .5s ease;
-        position: absolute;
-        top: 84px;
-        right: 0;
-    }
-      
-      /* menu icon */
-      
-    .header .header__menu-icon {
-        cursor: pointer;
-        display: inline-block;
-        padding: 28px 20px;
-        position: relative;
-        user-select: none;
-        align-self: center;
-    }
-      
-    .header .header__menu-icon .navicon {
-        background: white;
-        display: block;
-        height: 3px;
-        position: relative;
-        transition: background .2s ease-out;
-        width: 25px;
-    }
-      
-    .header .header__menu-icon .navicon:before,
-    .header .header__menu-icon .navicon:after {
-        background: white;
-        content: '';
-        display: block;
-        height: 100%;
-        position: absolute;
-        transition: all .2s ease-out;
-        width: 100%;
-    }
-      
-    .header .header__menu-icon .navicon:before {
-        top: 7px;
-    }
-      
-    .header .header__menu-icon .navicon:after {
-        top: -7px;
-    }
-      
-      /* menu btn */
-    
-      
-    .header .header__menu-btn:checked ~ .menu {
-        max-height: 240px;
-    }
-      
-    .header .header__menu-btn:checked ~ .header__menu-icon .navicon {
-        background: transparent;
-    }
-      
-    .header .header__menu-btn:checked ~ .header__menu-icon .navicon:before {
-        transform: rotate(-45deg);
-    }
-      
-    .header .header__menu-btn:checked ~ .header__menu-icon .navicon:after {
-        transform: rotate(45deg);
-    }
-      
-    .header .header__menu-btn:checked ~ .header__menu-icon:not(.steps) .navicon:before,
-    .header .header__menu-btn:checked ~ .header__menu-icon:not(.steps) .navicon:after {
-        top: 0;
-    }
-
-    .header .header__link:focus + .menu {
-        max-height: 0;
-    }
-    
-}
 
 .menu {
     display: flex;
     flex-direction: row;
     list-style: none;
     padding: 0;
-    margin: auto;
+    margin: 0;
     margin-right: 41px;
+    height: 100%;
 }
 
-@media (max-width: 666px) {
-    .menu {
-        margin-right: 25px;
-    }
+.header__planet-icon {
+    display: none;
 }
 
-@media (max-width: 510px) {      
-    .menu {
-        display: block;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        overflow: hidden;
-        background-color: rgba(35, 35, 35, 0.5);
-    }
+.header__arrow-icon {
+    display: none;
 }
 
 
@@ -169,7 +71,11 @@
 .header__list {
     list-style: none;
     margin-right: 33px;
+    padding: 29px 0;
+    height: 100%;
 }
+
+
 
 .header__link {
     color: white;
@@ -187,9 +93,6 @@
     opacity: 0.7;
 }
 
-.header__link-active {
-    color: #419EBB;
-}
 
 .header__list:last-child {
     margin-right: 0;
@@ -200,26 +103,30 @@
 
 .lead {
     display: flex;
-    justify-content: flex-end;
-    max-width: 1140px;
+    justify-content: space-between;
+    max-width: 1110px;
     width: 80%;
-    margin: 126px 165px 87px auto;
+    margin: 126px auto 87px auto;
 }
 
 .lead__image-group {
     max-width: 667px;
     width: 59%;
-    margin-right: 112px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.lead__image-group_type_mobile {
+    display: none;
 }
 
 .lead__geology-image {
     width: 163px;
     height: 199px;
     position: absolute;
-    top: 554px;
+    bottom: 0;
     display: none;
 }
 
@@ -265,13 +172,12 @@
 }
 
 .lead__button {
-    width: 350px;
+    width: 100%;
     height: 48px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     background-color: transparent;
     color: white;
     display: flex;
-    width: 100%;
     margin-bottom: 16px;
     text-transform: uppercase;
     padding: 0;
@@ -312,7 +218,7 @@
     display: flex;
     justify-content: center;
     max-width: 1110px;
-    width: 77%;
+    width: 80%;
     margin: auto;
 }
 
@@ -346,8 +252,6 @@
     text-transform: uppercase;
 }
 
-
-
 /* Footer */
 
 .footer {
@@ -359,3 +263,555 @@
     margin-top: 75px;
     text-align: center;
 }
+
+
+
+@media (max-width: 1040px) {
+
+    .header__list {
+        margin-right: 20px;
+    }
+
+    .menu {
+        margin-right: 20px;
+    }
+
+    .lead {
+        width: 94%;
+    }
+
+    .lead__button-text {
+        font-size: 10px;
+    }
+
+    .lead__image_type_saturn {
+        width: 500px;
+    }
+
+    .lead__image_type_jupiter {
+        width: 450px;
+    }
+
+    .facts {
+        width: 94%;
+    }
+    
+
+    .facts__value {
+        font-size: 30px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        margin: 0;
+    }
+
+    .logo-link {
+        margin: 32px auto 39px auto;
+    }
+
+    .menu {
+        margin-bottom: 27px;
+    }
+
+    .lead {
+        max-width: 689px;
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        justify-content: flex-end;
+    }
+
+    .lead__info-group {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 689px;
+        width: 100%;
+    }
+
+    .lead__image-group {
+        margin: 27px 0 11px 0;
+        max-width: 422px;
+        width: 100%;
+    }
+
+    .lead__geology-image {
+        width: 130px;
+        height: 158.6px;
+    }
+
+    .lead__image_type_mercury {
+        max-width: 184px;
+        width: 26.7%;
+        margin: 146px 0 130px 0;
+    }
+
+    .lead__image_type_venus {
+        max-width: 253px;
+        width: 36.7%;
+        margin: 112px 0 95px 0;
+    }
+
+    .lead__image_type_earth {
+        max-width: 285px;
+        width: 41.3%;
+        margin: 96px 0 79px 0;
+    }
+
+    .lead__image_type_mars {
+        max-width: 213px;
+        width: 30.9%;
+        margin: 132px 0 115px 0;
+    }
+
+    .lead__image_type_jupiter {
+        max-width: 369px;
+        width: 53.6%;
+        margin: 54px 0 37px 0;
+    }
+
+    .lead__image_type_saturn {
+        max-width: 500px;
+        width: 73%;
+        margin: 27px 0 11px 0;
+    }
+
+    .lead__image_type_uranus {
+        max-width: 290px;
+        width: 42%;
+        margin: 93px 0 77px 0;
+    }
+
+    .lead__image_type_neptune {
+        max-width: 285px;
+        width: 41.4%;
+        margin: 96px 0 79px 0;
+    }
+
+    .lead__info-text {
+        max-width: 339px;
+        width: 49.2%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lead__button-group {
+        max-width: 281px;
+        width: 40.7%;
+    }
+
+    .facts {
+        max-width: 689px; 
+        width: 90%;
+    }
+
+    .facts__card {
+        max-width: 164px;
+        width: 23.8%;
+    }
+
+    .facts__title {
+        font-size: 8px;
+        line-height: 16px;
+        letter-spacing: 0.73px;
+        margin: 16px auto 6px 15px;
+    }
+
+    .facts__value {
+        font-size: 24px;
+        line-height: 31.05px;
+        letter-spacing: -0.9px;
+        margin: 6px auto 19px 15px;
+    }
+
+}
+
+
+@media (max-width: 720px) {
+    .lead {
+        margin-bottom: 50px;
+    }
+
+    .lead__info-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .lead__info-text {
+        text-align: center;
+        max-width: 398px;
+        width: 100%;
+    }
+
+    .lead__source {
+        margin-bottom: 20px;
+    }
+
+    .lead__button-text {
+        font-size: 8px;
+    }
+}
+
+
+@media (max-width: 605px) {
+    .header {
+        flex-direction: row;
+        position: relative;
+    }
+    
+    .header__menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+        align-self: center;
+    }
+      
+    .navicon {
+        background: white;
+        display: block;
+        height: 3px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 25px;
+    }
+      
+    .navicon:before,
+    .navicon:after {
+        background: white;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+      
+    .navicon:before {
+        top: 7px;
+    }
+      
+    .navicon:after {
+        top: -7px;
+    }
+      
+    .header__menu-btn:checked ~ .header__menu-icon .navicon {
+        background: transparent;
+    }
+      
+    .header__menu-btn:checked ~ .header__menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+      
+    .header__menu-btn:checked ~ .header__menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+      
+    .header__menu-btn:checked ~ .header__menu-icon:not(.steps) .navicon:before,
+    .header__menu-btn:checked ~ .header__menu-icon:not(.steps) .navicon:after {
+        top: 0;
+    }
+
+    .menu {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color:#070724;
+        top: 68px;
+        width: 100%;
+        height: 100vh;
+        max-height: 0;
+    }
+
+    .header__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        max-width: 605px;
+        margin: 0 auto;
+        width: 87.2%;
+    }
+
+    .header__list:last-child {
+        border-bottom: none;
+        margin-left: 24px;
+    }
+
+    .header__menu-info-group {
+        display: flex;
+        align-items: center;;
+    }
+
+    .header__link {
+        margin-left: 20px;
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 1.36px;
+    }
+
+    .header__planet-icon {
+        display: block;
+    }
+
+    .header__arrow-icon {
+        display: block;
+        margin-right: 8px;
+    }
+
+    .logo-link {
+        margin: 16px auto 16px 24px;
+    }
+
+    .lead {
+        width: 100%;
+    }
+
+    .lead__button-group {
+        max-width: 605px;
+        order: -1;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .lead__button {
+        border: none;
+        background-color: transparent;
+        width: 33%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 9px;
+        font-weight: 700;
+        line-height: 10.08px;
+        letter-spacing: 1.93px;
+        height: 0;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .lead__button-number {
+        display: none;
+    }
+
+    .lead__button-text {
+        opacity: 0;
+    }
+
+    .logo-link {
+        margin-left: 24px;
+    }
+
+    .lead__image-group_type_mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 605px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .lead__image-group_type_normal {
+        display: none;
+    }
+
+    .lead__image_mobile_mercury {
+        width: 29.7%;
+        max-width: 150px;
+        margin: 95px 0;
+    }
+
+    .lead__image_mobile_venus {
+        width: 41%;
+        max-width: 203px;
+        margin: 74px 0;
+    }
+
+    .lead__image_mobile_earth {
+        width: 46%;
+        max-width: 229px;
+        margin: 64px 0;
+    }
+
+    .lead__image_mobile_mars {
+        width: 34.4%;
+        max-width: 171px;
+        margin: 87px 0;
+    }
+
+    .lead__image_mobile_jupiter {
+        width: 59.73%;
+        max-width: 296px;
+        margin: 40px 0;
+    }
+
+    .lead__image_mobile_saturn {
+        width: 68.2%;
+        max-width: 378px;
+        margin: 24px 0;
+    }
+
+    .lead__image_mobile_uranus{
+        width: 46.9%;
+        max-width: 233px;
+        margin: 64px 0;
+    }
+
+    .lead__image_mobile_neptune {
+        width: 46.1%;
+        max-width: 229px;
+        margin: 64px 0;
+    }
+
+    .lead__geology-image {
+        width: 100px;
+        height: 122px;
+    }
+
+    .lead__geology-image_saturn {
+        bottom: 0;
+    }
+
+
+    .lead__title {
+        font-size: 40px;
+        line-height: 51.76px;
+        margin: auto;
+        margin-bottom: 16px;
+    }
+
+    .lead__info-text {
+        max-width: 327px;
+        width: 87.2%;
+    }
+
+    .lead__description {
+        font-size: 11px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .lead__source {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .lead__source-link {
+        font-size: 12px;
+    }
+
+    .facts {
+        flex-direction: column;
+        max-width: 327px;
+        width: 87.2%;
+    }
+
+    .facts__card {
+        max-width: 327px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    .facts__title {
+        font-size: 8px;
+        line-height: 16px;
+        letter-spacing: 0.73px;
+        margin: 16px auto 16px 24px;
+    }
+
+    .facts__value {
+        font-size: 20px;
+        line-height: 25.88px;
+        letter-spacing: -0.75px;
+        margin: 11px 24px 11px auto;
+    }
+
+    .footer {
+        font-size: 8px;
+    }
+
+    .menu-active {
+        transition: 1s;
+        max-height: 100vh;
+    }
+    .menu-inactive {
+        transition: 0.7s;
+        max-height: 0vh;
+    }
+}
+
+
+@media (max-width: 375px) {
+    .lead__image_mobile_mercury {
+        width: 29.7%;
+        max-width: 111px;
+        margin: 95px 0;
+    }
+
+    .lead__image_mobile_venus {
+        width: 41%;
+        max-width: 154px;
+        margin: 74px 0;
+    }
+
+    .lead__image_mobile_earth {
+        width: 46%;
+        max-width: 173px;
+        margin: 64px 0;
+    }
+
+    .lead__image_mobile_mars {
+        width: 34.4%;
+        max-width: 129px;
+        margin: 87px 0;
+    }
+
+    .lead__image_mobile_jupiter {
+        width: 59.73%;
+        max-width: 224px;
+        margin: 40px 0;
+    }
+
+    .lead__image_mobile_saturn {
+        width: 68.2%;
+        max-width: 256px;
+        margin: 24px 0;
+    }
+
+    .lead__image_mobile_uranus{
+        width: 46.9%;
+        max-width: 176px;
+        margin: 64px 0;
+    }
+
+    .lead__image_mobile_neptune {
+        width: 46.1%;
+        max-width: 173px;
+        margin: 64px 0;
+    }
+}
+    

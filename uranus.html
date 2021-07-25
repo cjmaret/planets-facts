@@ -17,32 +17,87 @@
     <input class="header__menu-btn" type="checkbox" id="header__menu-btn" />
     <label class="header__menu-icon" for="header__menu-btn"><span class="navicon"></span></label>
     <ul class="menu">
-      <li class="header__list"><a class="header__link" href="./index.html">Mercury</a></li>
-      <li class="header__list"><a class="header__link" href="./venus.html">Venus</a></li>
-      <li class="header__list"><a class="header__link" href="./earth.html">Earth</a></li>
-      <li class="header__list"><a class="header__link" href="./mars.html">Mars</a></li>
-      <li class="header__list"><a class="header__link" href="./jupiter.html">Jupiter</a></li>
-      <li class="header__list"><a class="header__link" href="./saturn.html">Saturn</a></li>
-      <li class="header__list"><a class="header__link header__link-active" href="./uranus.html">Uranus</a></li>
-      <li class="header__list"><a class="header__link" href="./neptune.html">Neptune</a></li>
+      <li class="header__list">
+        <div class="header__menu-info-group">
+          <img class="header__planet-icon" alt="mercury" src="./assets/mercury/menu-mercury.png">
+          <a class="header__link" href="./index.html">Mercury</a>
+        </div>
+        <img class="header__arrow-icon" src="./assets/arrow-right.png" />
+      </li>
+      <li class="header__list">
+        <div class="header__menu-info-group">
+          <img class="header__planet-icon" alt="venus" src="./assets/venus/menu-venus.png">
+          <a class="header__link" href="./venus.html">Venus</a>
+        </div>
+        <img class="header__arrow-icon" src="./assets/arrow-right.png" />
+      </li>
+      <li class="header__list">
+        <div class="header__menu-info-group">
+          <img class="header__planet-icon" alt="earth" src="./assets/earth/menu-earth.png">
+          <a class="header__link" href="./earth.html">Earth</a>
+        </div>
+        <img class="header__arrow-icon" src="./assets/arrow-right.png" />
+      </li>
+      <li class="header__list">
+        <div class="header__menu-info-group">
+          <img class="header__planet-icon" alt="mars" src="./assets/mars/menu-mars.png">
+          <a class="header__link" href="./mars.html">Mars</a>
+        </div>
+        <img class="header__arrow-icon" src="./assets/arrow-right.png" />
+      </li>
+      <li class="header__list">
+        <div class="header__menu-info-group">
+          <img class="header__planet-icon" alt="jupiter" src="./assets/jupiter/menu-jupiter.png">
+          <a class="header__link" href="./jupiter.html">Jupiter</a>
+        </div>
+        <img class="header__arrow-icon" src="./assets/arrow-right.png" />
+      </li>
+      <li class="header__list">
+        <div class="header__menu-info-group">
+          <img class="header__planet-icon" alt="saturn" src="./assets/saturn/menu-saturn.png">
+          <a class="header__link" href="./saturn.html">Saturn</a>
+        </div>
+        <img class="header__arrow-icon" src="./assets/arrow-right.png" />
+      </li>
+      <li class="header__list" style="border-top: 4px solid #1EC1A2; padding-top: 25px">
+        <div class="header__menu-info-group">
+          <img class="header__planet-icon" alt="uranus" src="./assets/uranus/menu-uranus.png">
+          <a class="header__link header__link-active" href="./uranus.html">Uranus</a>
+        </div>
+        <img class="header__arrow-icon" src="./assets/arrow-right.png" />
+      </li>
+      <li class="header__list">
+        <div class="header__menu-info-group">
+          <img class="header__planet-icon" alt="neptune" src="./assets/neptune/menu-neptune.png">
+          <a class="header__link" href="./neptune.html">Neptune</a>
+        </div>
+        <img class="header__arrow-icon" src="./assets/arrow-right.png" />
+      </li>
     </ul>
   </header>
 
 
   <section class="lead">
-    <div class="lead__image-group">
-      <img class="lead__image" src="./assets/uranus/planet-uranus.svg" alt="uranus" />
+    <div class="lead__image-group lead__image-group_type_normal">
+      <img class="lead__image lead__image_type_uranus" src="./assets/uranus/planet-uranus.svg" alt="uranus" />
       <img class="lead__geology-image" src="assets/uranus/geology-uranus.png" alt="uranus geology view" />
     </div>
     <div class="lead__info-group">
-      <h1 class="lead__title">Uranus</h1>
-      <p class="lead__description">Uranus is the seventh planet from the Sun. Its name is a reference to the 
-        Greek god of the sky, Uranus according to Greek mythology, was the great-grandfather 
-        of Ares. It has the third-largest planetary radius and fourth-largest planetary 
-        mass in the Solar System.</p>
-      <p class="lead__source">Source: <a class="lead__source-link" href="https://en.wikipedia.org/wiki/Saturn" target="_blank">Wikipedia</a></p>
+      <div class="lead__image-group lead__image-group_type_mobile">
+        <img class="lead__image lead__image_mobile_uranus" src="./assets/uranus/planet-uranus.svg" alt="uranus" />
+        <img class="lead__geology-image" src="assets/uranus/geology-uranus.png" alt="uranus geology view" />
+      </div>
+      <div class="lead__info-text">
+        <h1 class="lead__title">Uranus</h1>
+        <p class="lead__description">Uranus is the seventh planet from the Sun. Its name is a reference to the
+          Greek god of the sky, Uranus according to Greek mythology, was the great-grandfather
+          of Ares. It has the third-largest planetary radius and fourth-largest planetary
+          mass in the Solar System.</p>
+        <p class="lead__source">Source: <a class="lead__source-link" href="https://en.wikipedia.org/wiki/Saturn"
+            target="_blank">Wikipedia</a></p>
+      </div>
       <div class="lead__button-group">
-        <button class="lead__button lead__button_type_overview" style="background-color: #1EC1A2">
+        <button class="lead__button lead__button_type_overview">
           <p class="lead__button-number">01</p>
           <p class="lead__button-text">Overview</p>
         </button>

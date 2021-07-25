@@ -2,10 +2,15 @@ const buttons = document.querySelectorAll('.lead__button');
 const buttonOverview = document.querySelector(".lead__button_type_overview");
 const buttonInternal = document.querySelector(".lead__button_type_internal");
 const buttonGeology = document.querySelector(".lead__button_type_geology");
-const planetImage = document.querySelector(".lead__image");
-const planetGeologyView = document.querySelector(".lead__geology-image");
+const planetImage = document.querySelectorAll(".lead__image");
+const planetGeologyView = document.querySelectorAll(".lead__geology-image");
 const planetDescription = document.querySelector(".lead__description");
 const sourceLink = document.querySelector(".lead__source-link");
+const windowWidth = window.matchMedia("(max-width: 605px)");
+const hamburgerButton = document.querySelector(".header__menu-btn");
+const mobileMenu = document.querySelector(".menu");
+let isClosed = true;
+
 
 const marsOverview = {
     alt: "Mars Planet",
@@ -28,6 +33,7 @@ const marsGeology = {
     description: "Mars is a terrestrial planet whose surface consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The surface is primarily composed of tholeiitic basalt, although parts are more silica-rich than typical basalt."
 }
 
+
 function addActive(button) {
     button.style.backgroundColor = "#D14C32";
 }
@@ -35,45 +41,105 @@ function addActive(button) {
 function removeActive() {
     buttons.forEach(button => {
         button.style.backgroundColor = "transparent";
-
     })
 }
 
+function addActiveMobile(button) {
+    button.style.borderBottom = "4px solid #D14C32";
+}
+
+function removeActiveMobile() {
+    buttons.forEach(button => {
+        button.style.borderBottom = "transparent";
+    })
+}
+
+function mobileButtonTextChange() {
+    if (windowWidth.matches) {
+        buttonOverview.textContent = "overview";
+        buttonInternal.textContent = "structure";
+        buttonGeology.textContent = "surface";
+    }
+}
+
 function addPlanetDetails(planetObject) {
-    planetImage.src = planetObject.image;
-    planetImage.alt = planetObject.alt;
+    planetImage.forEach(planet => {
+        planet.src = planetObject.image;
+        planet.alt = planetObject.alt;
+    })
     planetDescription.textContent = planetObject.description;
     sourceLink.href = planetObject.link;
 }
 
 function geologyActive(button) {
-    if (button === buttonGeology) {
-        planetGeologyView.classList.add('image-active');
-    } else {
-        planetGeologyView.classList.remove('image-active');
-
-    }
+    planetGeologyView.forEach(geologyView => {
+        if (button === buttonGeology) {
+            geologyView.classList.add('image-active');
+        } else {
+            geologyView.classList.remove('image-active');
+        }
+    })
 };
+
+
+mobileButtonTextChange();
+
+window.addEventListener('load', () => {
+    if (windowWidth.matches) {
+        addActiveMobile(buttonOverview);
+    } else {
+        addActive(buttonOverview);
+    }
+});
 
 
 buttonOverview.addEventListener('click', () => {
     addPlanetDetails(marsOverview);
     geologyActive(buttonOverview);
-    removeActive();
-    addActive(buttonOverview);
+    if (windowWidth.matches) {
+        removeActiveMobile()
+        addActiveMobile(buttonOverview);
+    } else {
+        removeActive();
+        addActive(buttonOverview);
+    }
 })
 
 buttonInternal.addEventListener('click', () => {
     addPlanetDetails(marsInternal);
     geologyActive(buttonInternal);
-    removeActive();
-    addActive(buttonInternal);
+    if (windowWidth.matches) {
+        removeActiveMobile()
+        addActiveMobile(buttonInternal);
+    } else {
+        removeActive();
+        addActive(buttonInternal);
+    }
 })
 
 
 buttonGeology.addEventListener('click', () => {
     addPlanetDetails(marsGeology);
     geologyActive(buttonGeology);
-    removeActive();
-    addActive(buttonGeology);
-})
+    if (windowWidth.matches) {
+        removeActiveMobile()
+        addActiveMobile(buttonGeology);
+    } else {
+        removeActive();
+        addActive(buttonGeology);
+    }
+});
+
+function toggleMenu() {
+    if (isClosed) {
+        mobileMenu.classList.add('menu-active');
+        mobileMenu.classList.remove('menu-inactive');
+        isClosed = !isClosed;
+    } else {
+        mobileMenu.classList.remove('menu-active');
+        mobileMenu.classList.add('menu-inactive');
+        isClosed = !isClosed;
+    }
+}
+
+hamburgerButton.addEventListener('click', toggleMenu);
