@@ -130,7 +130,7 @@ buttonGeology.addEventListener('click', () => {
 })
 
 function toggleMenu() {
-    if (isClosed) {
+    if (!isClosed) {
         mobileMenu.classList.add('menu-active');
         mobileMenu.classList.remove('menu-inactive');
         blackBackground.style.visibility = "visible";
